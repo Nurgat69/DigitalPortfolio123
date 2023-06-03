@@ -1,0 +1,12 @@
+@model Web_Digital_Potrfolio.Models.Portfolio
+@{
+    ViewData["Title"] = $"Удаление портфолио {ViewBag.Title}";
+} 
+
+<h1>Вы уверены, что хотите удалить Ваш портфолио?</h1>
+<p>
+    <form method="post" asp-controller="Portfolio" asp-action="Delete" asp-route-id="@Model.Id">
+        <input type="submit" value="Подтвердить" />
+        <a asp-area="" asp-controller="Portfolio" asp-action="Detail" asp-route-id="@Model.Id">Отмена</a>
+    </form>
+</p>
